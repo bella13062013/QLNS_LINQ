@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLNS_LINQ" Class="QLNSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAB2-MAY11\SQLEXPRESS;Initial Catalog=QLNS_LINQ;Integrated Security=True" SettingsObjectName="QLNV_LINQ.Properties.Settings" SettingsPropertyName="QLNS_LINQConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.NHANVIEN" Member="NHANVIENs">
+    <Type Name="NHANVIEN">
+      <Column Name="[Mã nhân viên]" Member="Mã_nhân_viên" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[Họ tên]" Member="Họ_tên" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Ngày sinh]" Member="Ngày_sinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[Giới tính]" Member="Giới_tính" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="[Số điện thoại]" Member="Số_điện_thoại" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="[Phòng ban]" Member="Phòng_ban" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="NHANVIEN_PHONGBAN" Member="PHONGBANs" ThisKey="Mã_nhân_viên" OtherKey="Mã_phòng_ban" Type="PHONGBAN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PHONGBAN" Member="PHONGBANs">
+    <Type Name="PHONGBAN">
+      <Column Name="[Mã phòng ban]" Member="Mã_phòng_ban" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Tên phòng ban]" Member="Tên_phòng_ban" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="NHANVIEN_PHONGBAN" Member="NHANVIEN" ThisKey="Mã_phòng_ban" OtherKey="Mã_nhân_viên" Type="NHANVIEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

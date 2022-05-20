@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QLNS">
+  <DataContextMoniker Name="/QLNSDataContext" />
+  <nestedChildShapes>
+    <classShape Id="6b9aa0e0-d5cd-4a91-a9f8-00d86bf40958" absoluteBounds="1, 1, 2, 1.9631982421875">
+      <DataClassMoniker Name="/QLNSDataContext/NHANVIEN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="85a65a6f-123d-4d8d-89fc-fe841e667863" absoluteBounds="1.0150000000000001, 1.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a9c4091b-2f62-49d0-b016-dd7c348581fd" absoluteBounds="4, 1.125, 2, 1.1939925130208331">
+      <DataClassMoniker Name="/QLNSDataContext/PHONGBAN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="49846da1-09b1-405b-bd96-ad84f6e0f363" absoluteBounds="4.015, 1.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3 : 1.72199625651042); (4 : 1.72199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLNSDataContext/NHANVIEN/NHANVIEN_PHONGBAN" />
+      <nodes>
+        <classShapeMoniker Id="6b9aa0e0-d5cd-4a91-a9f8-00d86bf40958" />
+        <classShapeMoniker Id="a9c4091b-2f62-49d0-b016-dd7c348581fd" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
